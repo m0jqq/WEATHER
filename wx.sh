@@ -33,23 +33,23 @@ feels_like=${feels_like%.*}
 
 # convert wind direction to cardinal
         if [[ "$wdeg" -gt -1 && "$wdeg" -lt 22 ]]
-                then wdir="Northerly"
+                then wdir="a Northerly"
         elif [[ "$wdeg" -gt 22 && "$wdeg" -lt 68 ]]
-                then wdir="North-Easterly"
+                then wdir="a North-Easterly"
         elif [[ "$wdeg" -gt 67 && "$wdeg" -lt 112 ]]
-                then wdir="Easterly"
+                then wdir="an Easterly"
         elif [[ "$wdeg" -gt 111 && "$wdeg" -lt 157 ]]
-                then wdir="South-Easterly"
+                then wdir="a South-Easterly"
         elif [[ "$wdeg" -gt 156 && "$wdeg" -lt 202 ]]
-                then wdir="Southerly"
+                then wdir="a Southerly"
         elif [[ "$wdeg" -gt 201 && "$wdeg" -lt 247 ]]
-                then wdir="South-Westerly"
+                then wdir="a South-Westerly"
         elif [[ "$wdeg" -gt 246 && "$wdeg" -lt 292 ]]
-                then wdir="Westerly"
+                then wdir="a Westerly"
         elif [[ "$wdeg" -gt 291 && "$wdeg" -lt 337 ]]
-                then wdir="North-Westerly"
+                then wdir="a North-Westerly"
         elif [[ "$wdeg" -gt 336 && "$wdeg" -lt 361 ]]
-                then wdir="Northerly"
+                then wdir="a Northerly"
         fi
 
 # ouput
@@ -59,8 +59,8 @@ echo "  TODAY'S WEATHER"
 echo
 echo "  The weather in Cramlington, GB is currently ${temperature} degrees Centigrade."
 echo "  This feels like ${feels_like} degrees."
-echo "  The wind is ${wind_speed} kmh from a ${wdir} direction."
+echo "  The wind is ${wind_speed} kmh from ${wdir} direction."
 echo
 
-echo "   Thanks for checking :)"
+echo "   Thanks for checking :) - [ver 1.1]"
 echo
